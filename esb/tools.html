@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Esb Tools</title>
+<link rel="stylesheet" href="tools.css" type="text/css">
+<script src="script.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="apple-touch-icon" sizes="180x180" href="esbimages/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="esbimages/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="esbimages/favicon-16x16.png">
+<link rel="manifest" href="esbimages/site.webmanifest">
+<link rel="mask-icon" href="esbimages/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+</head>
+
+
+<body>
+
+
+
+
+
+
+    <!-- Header & Navigation -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="#hero">
+            <span tooltip="e-School Books" flow="down">
+              <img src="esbimages/esblogo.svg" class="svg-logo" \>
+            </span>
+          </a>
+        </div>
+        <div class="mainNav">
+          <div class="mobileToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="index.html#books">Books</a>
+              </li>
+              <!---
+              <li>
+                <a class="smoothscroll" href="#about">About</a>
+              </li>
+              <!--    <li><a class="smoothscroll" href="#services">Authors Desk</a></li> -->
+              <!---
+              <li>
+                <a class="smoothscroll" href="#contact">Contact</a>
+              </li>
+              -->
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- Header & Navigation End -->
+    <!-- Hero -->
+    <section id="hero">
+      <div class="container">
+        <h2 >
+          <span class="first" style="font-weight:50;">E-School Books</span>
+          </br>
+          <span class="white first">TOOLS</span>
+          </h2>
+         <!-- </br>
+          <span class="first"><b>.</b></span>
+        </h2>
+        <p class="second"></br>
+        <p></p>
+        </p>
+        <a href="#books" class="smoothscroll">
+          <div class="button second">learn</div>
+        </a> -->
+      </div>
+    </section>
+
+
+    
+
+
+<!-- CALCULATOR -->
+
+<div class="calculator-container">
+    <h2 align="center">CALCULATOR</h1>
+    <div class="display" id="calcDisplay">0</div>
+    <div class="button-container">
+      <div class="button-calc" onclick="addToDisplay('7')">7</div>
+      <div class="button-calc" onclick="addToDisplay('8')">8</div>
+      <div class="button-calc" onclick="addToDisplay('9')">9</div>
+      <div class="button operator" onclick="addToDisplay('/')">/</div>
+      <div class="button-calc" onclick="addToDisplay('4')">4</div>
+      <div class="button-calc" onclick="addToDisplay('5')">5</div>
+      <div class="button-calc" onclick="addToDisplay('6')">6</div>
+      <div class="button operator" onclick="addToDisplay('*')">*</div>
+      <div class="button-calc" onclick="addToDisplay('1')">1</div>
+      <div class="button-calc" onclick="addToDisplay('2')">2</div>
+      <div class="button-calc" onclick="addToDisplay('3')">3</div>
+      <div class="button operator" onclick="addToDisplay('-')">-</div>
+      <div class="button-calc" onclick="clearDisplay()">AC</div>
+      <div class="button-calc" onclick="addToDisplay('0')">0</div>
+      <div class="button-calc" onclick="addToDisplay('.')">.</div>
+      <div class="button operator" onclick="addToDisplay('+')">+</div>
+      
+      <div class="button operator" onclick="calculateResult()" style="grid-column: span 4;">=</div>
+    </div>
+  </div>
+
+
+<!-- LENGTH -->
+
+
+  <div class="converter-container">
+    <h2 align="center">Length Converter</h1>
+    <div class="input-group">
+      <label>Centimeters (cm):</label>
+      <input type="number" id="cmInput" />
+    </div>
+    <div class="input-group">
+      <label>Meters (m):</label>
+      <input type="number" id="mInput" />
+    </div>
+    <div class="input-group">
+      <label>Kilometers (km):</label>
+      <input type="number" id="kmInput" />
+    </div>
+    <!-- Add more unit inputs for other conversions -->
+  </div>
+
+
+  <!---AREA-->
+
+
+  <div class="converter-container">
+    <h2 align="center">Area Converter</h1>
+    <div class="input-group">
+      <label>Square Meters (m²):</label>
+      <input type="number" id="m2Input" />
+    </div>
+    <div class="input-group">
+      <label>Square Kilometers (km²):</label>
+      <input type="number" id="km2Input" />
+    </div>
+    <div class="input-group">
+      <label>Square Miles (mi²):</label>
+      <input type="number" id="mi2Input" />
+    </div>
+  </div>
+
+
+  <!-- MASS -->
+
+  <div class="converter-container">
+    <h2 align="center">Mass Converter</h1>
+    <div class="input-group">
+      <label>Kilograms (kg):</label>
+      <input type="number" id="kgInput" />
+    </div>
+    <div class="input-group">
+      <label>Pounds (lb):</label>
+      <input type="number" id="lbInput" />
+    </div>
+    <div class="input-group">
+      <label>Ounces (oz):</label>
+      <input type="number" id="ozInput" />
+    </div>
+  </div>
+
+  <!--- TIME --->
+
+
+  <div class="converter-container">
+    <h2 align="center">Time Converter</h1>
+    <div class="input-group">
+      <label>Hours (h):</label>
+      <input type="number" id="hoursInput" />
+    </div>
+    <div class="input-group">
+      <label>Minutes (min):</label>
+      <input type="number" id="minutesInput" />
+    </div>
+    <div class="input-group">
+      <label>Seconds (s):</label>
+      <input type="number" id="secondsInput" />
+    </div>
+  </div>
+
+<!-- POWER-->
+
+<div class="converter-container">
+    <h2 align="center">Power Converter</h1>
+    <div class="input-group">
+      <label>Watts (W):</label>
+      <input type="number" id="wattsInput" />
+    </div>
+    <div class="input-group">
+      <label>Horsepower (hp):</label>
+      <input type="number" id="hpInput" />
+    </div>
+    <div class="input-group">
+      <label>Kilowatts (kW):</label>
+      <input type="number" id="kwInput" />
+    </div>
+  </div>
+
+  <!-- speed-->
+
+  <div class="converter-container">
+    <h2 align="center">Speed Converter</h1>
+    <div class="input-group">
+      <label>Kilometers per Hour (km/h):</label>
+      <input type="number" id="kmhInput" />
+    </div>
+    <div class="input-group">
+      <label>Meters per Second (m/s):</label>
+      <input type="number" id="mpsInput" />
+    </div>
+    <div class="input-group">
+      <label>Miles per Hour (mph):</label>
+      <input type="number" id="mphInput" />
+    </div>
+  </div>
+
+
+<!-- BMI -->
+
+
+
+
+
+ <div class="converter-container">
+    <h2 align="center">BMI Calculator</h1>
+    <div class="input-group">
+      <label>Weight (kg):</label>
+      <input type="number" id="weightInput" />
+    </div>
+    <div class="input-group">
+      <label>Height (cm):</label>
+      <input type="number" id="heightInput" />
+    </div>
+    <button onclick="calculateBMI()">Calculate</button>
+    <div class="input-group">
+      <label>BMI:</label>
+      <input type="text" id="resultBMI" disabled />
+    </div>
+    <div class="input-group">
+      <label>Interpretation:</label>
+      <input type="text" id="interpretationBMI" disabled />
+    </div>
+  </div>
+
+
+<!-- AGE -->
+
+<div class="converter-container">
+    <h2 align="center">Age Calculator</h1>
+    <div class="input-group">
+      <label>Enter your birth date:</label>
+      <input type="date" id="birthdateInput" class="custom-date-input" />
+      <span class="date-picker-icon">&#x1F4C5;</span>
+    </div>
+    <button onclick="calculateAge()">Calculate Age</button>
+    <div class="input-group">
+      <label>Your current age:</label>
+      <input type="text" id="resultAge" disabled />
+    </div>
+  </div>
+
+<!--Date Difference-->
+
+<div class="converter-container">
+    <h2 align="center">Date Difference Calculator</h1>
+    <div class="input-group">
+      <label>Enter the first date:</label>
+      <input type="date" id="firstDateInput" class="custom-date-input" />
+      <span class="date-picker-icon" onclick="showDatePicker('firstDateInput')">&#x1F4C5;</span>
+    </div>
+    <div class="input-group">
+      <label>Enter the second date:</label>
+      <input type="date" id="secondDateInput" class="custom-date-input" />
+      <span class="date-picker-icon" onclick="showDatePicker('secondDateInput')">&#x1F4C5;</span>
+    </div>
+    <button onclick="calculateDateDifference()">Calculate</button>
+    <div class="input-group">
+      <label>Number of days between the dates:</label>
+      <input type="text" id="resultDateDifference" disabled />
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

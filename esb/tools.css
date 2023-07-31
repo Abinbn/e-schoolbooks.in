@@ -1,0 +1,433 @@
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: "Roboto", sans-serif;
+    color: #212529;
+    background-color: #fff;
+    margin: 0;
+    }
+
+    * {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+
+img {
+   width: 100%;
+   height: auto;
+}
+/* Responsive Grid */
+
+.container {
+   width: 100% auto;
+   max-width: 1145px;
+   margin: 0 auto;
+   box-sizing: border-box;
+   padding: 0 20px;
+   position: relative;
+}
+.row {
+   clear: both;
+}
+/* Columns */
+
+.col {
+   float:none;
+   margin: 0 0 0 0;
+   box-sizing: border-box;
+}
+.col:last-child {
+   margin-right: 0;
+}
+.three.col {
+   width: 20%;
+}
+
+/* For Relic Browsers */
+.col.last {
+   margin: 0;
+}
+
+/* Mobile Devices */
+
+@media all and (max-width: 550px) {
+  
+   .three.col {
+      float: none;
+      width: 100%;
+   }
+   .hide-on-mobile {
+      display: none !important;
+      width: 0;
+      height: 0;
+   }
+}
+.container:after,
+.row:after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+/* Hr */
+
+hr {
+   border: 0;
+   height: 1px;
+   background: #eeeeee;
+   clear: both;
+}
+
+/* Typography */
+
+p {
+   margin-top: 0;
+   margin-bottom: 1rem;
+   line-height: 1.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: inherit;
+   font-weight: 700;
+   line-height: 1.1;
+   color: inherit;
+   margin-top: 1.5rem;
+   margin-bottom: 1rem;
+   text-transform: uppercase;
+}
+h1 {
+   font-size: 1rem;
+}
+h2 {
+   font-size: 1rem;
+   margin: 1.5rem 0;
+}
+h2:after {
+   content: "";
+   display: block;
+   width: 50px;
+   height: 7px;
+   background: #ff4136;
+   margin: 0 auto;
+   margin-top: 20px;
+}
+h3 {
+   font-size: 1rem;
+}
+h4 {
+   font-size: 1rem;
+}
+h5 {
+   font-size: 1rem;
+}
+h6 {
+   font-size: 1rem;
+}
+p {
+   font-family: "Roboto", sans-serif;
+}
+
+
+    .converter-container {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px #999999, 0 6px 15px #888888;
+    }
+
+
+     .calculator-container {
+      max-width: 300px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px #999, 0 6px 15px #888;    
+
+    }
+
+    .display {
+      width: 100%;
+      height: 40px;
+      padding: 5px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: right;
+      justify-content: center;
+      
+    }
+
+
+    .button-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 5px;
+    }
+
+
+    .button-calc {
+      padding: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .button.operator {
+      background-color: #e0e0e0;
+      padding: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+.bold {
+   font-weight: 700;
+}
+button:hover {
+   opacity: 0.7;
+}
+
+
+    .input-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input {
+      width: 150px;
+    }
+
+
+    button {
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0px 0px 10px 0px;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 0 4px 6px #999, 0 6px 15px #888;    
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+
+    }
+
+
+
+    input[type="date"] {
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+    /* Hide the default arrow on the date picker */
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+    /* Show a custom icon or text for the date picker */
+    .date-picker-icon {
+      cursor: pointer;
+    }
+    /* Customize the appearance of the date picker popup (optional) */
+    input[type="date"]::-webkit-calendar-picker-indicator:hover {
+      background-color: #f0f0f0;
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator::before {
+      content: "📅";
+    }
+
+
+    
+
+/* Header */
+
+header {
+   padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(0, 31, 63, 0.466); 
+  backdrop-filter: blur(0px); 
+  opacity: 1; 
+  margin-top: 0px;
+}
+.scrolled {
+   background: #000;
+}
+header .logo {
+   font-weight: 700;
+   text-transform: uppercase;
+   color: #ffffff;
+   margin-top: 0;
+   position: absolute;
+   top: -10px;
+   font-size: 2rem;
+}
+
+.logo {
+   width: 55px;
+   height: 55px;
+   box-shadow: 2px 2p 2px 2px white;
+}
+header .mainNav {
+   top: 0px;
+   max-height: 30px;
+   z-index: 99;
+   width: 100%;
+   overflow: hidden;
+   -webkit-transition: all 0.3s;
+   transition: all 0.3s;
+}
+header .openNav {
+   max-height: 300px !important;
+}
+header nav {
+   width: 100%;
+}
+header nav ul {
+   list-style: none;
+   overflow: hidden;
+   text-align: right;
+   padding: 0;
+   margin: 0;
+}
+header nav ul li {
+   display: inline-block;
+   margin-left: 50px;
+}
+header nav ul a {
+   text-decoration: none;
+   color: #ffffff;
+   text-transform: uppercase;
+   font-size: 0.9em;
+   font-weight: 700;
+}
+
+header nav ul a:hover {
+   color: #ff4136;
+}
+header .mobileToggle {
+   display: none;
+   cursor: pointer;
+   font-size: 20px;
+   position: absolute;
+   right: 20px;
+   top: 6px;
+   width: 30px;
+}
+header .mobileToggle span {
+   width: 25px;
+   height: 2px;
+   margin-bottom: 6px;
+   background: #ffffff;
+   display: block;
+}
+
+@media only screen and (max-width: 550px) {
+   header nav {
+      width: 100%;
+   }
+   header nav ul {
+      padding-top: 0px;
+      margin-bottom: 22px;
+      text-align: center;
+      width: 100%;
+   }
+   header nav ul li {
+      width: 100%;
+      padding: 7px 0;
+      margin: 0;
+   }
+   header nav ul li:first-child {
+      margin-top: 70px;
+   }
+   header .mobileToggle {
+      display: block;
+   }
+}
+/* Hero One */
+
+#hero {
+   background: #001f3f;
+   padding: 200px 0 120px 0;
+   text-align: center;
+   width: 100%;
+}
+
+#hero h2 {
+   text-align: center;
+   font-size: 4.6em;
+   text-transform: capitalize;
+   margin-top: 0;
+   line-height: 1;
+   color: #ff4136;
+   font-weight: 300;
+}
+#hero h2:after {
+   display: none;
+}
+
+#hero p {
+   color: rgb(255, 255, 255, 0.7);
+   font-size: 1rem;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-weight: normal;
+   line-height: 21px;
+   text-align: center;
+   width: 60%;
+   display: block;
+   margin: 0 auto;
+   padding-bottom: 40px;
+}
+#hero .button {
+   border: 0;
+   color: #fff;
+   height: 50px;
+   line-height: 48px;
+   font-size: 0.9rem;
+   padding: 0 40px;
+   background: #ff4136;
+   display: inline-block;
+   margin: 0 auto;
+   font-family: "Roboto", sans-serif;
+   text-transform: uppercase;
+   font-weight: 700;
+}
+#hero .white {
+   color: #fff;
+   font-weight: 700;
+}
+
+@media all and (max-width: 550px) {
+   #hero button {
+      margin-bottom: 20px;
+   }
+   #hero h2 {
+      font-size: 2.2em;
+   }
+   #hero p {
+      font-size: 0.8em;
+      line-height: 21px;
+      width: 100%;
+   }
+}
