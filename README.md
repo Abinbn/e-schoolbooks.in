@@ -1,6 +1,7 @@
-# E-SchoolBooks.in - Empowering Education, Enabling Growth
+# E-SchoolBooks.in 
+Empowering Education, Enabling Growth
 
-![E-SchoolBooks](https://your-website-url.com/path/to/your/logo.png)
+![E-SchoolBooks](https://github.com/Abinbn/e-schoolbooks.in/blob/1b8eaf24f9551283fe028b8d09ff66825d8c09e6/esb/esbimages/esblogo.svg)
 
 Welcome to E-SchoolBooks.in - one of the fastest-growing and innovative educational platforms that is committed to providing free textbooks to students from standard 1 to 10. Our mission is to empower students with the knowledge they need to excel in their studies and achieve their dreams.
 
@@ -28,9 +29,13 @@ Our current website, [E-SchoolBooks.in](https://www.e-schoolbooks.in), is a user
 
 As a non-profit organization, we rely on the support of kind-hearted individuals and organizations to continue our mission. You can contribute to our cause by:
 
-- **Donating**: Your generous donations help us expand our reach and provide free textbooks to more students.
+- **[Donating](https://buy.stripe.com/5kA9BpcwC4eW5qgfYY)**: Your generous donations help us expand our reach and provide free textbooks to more students.
 - **Spreading the Word**: Share our platform with students, parents, and educators, so they can benefit from our resources.
-- **Volunteering**: If you are passionate about education, consider joining our team as a volunteer and contribute your skills and expertise.
+  ```
+  www.e-schoolbooks.in
+  ```
+- **[Volunteering](mailto:abinjannath007@gmail.com)**: If you are passionate about education, consider joining our team as a volunteer and contribute your skills and expertise.
+  
 
 ## Join Us on the Journey
 
@@ -42,13 +47,12 @@ Let's make education accessible to all!
 
 **Contact Information**:
 - E-mail: [info@e-schoolbooks.in](mailto:info@e-schoolbooks.in)
-- Phone: +91 9946882478
+- Phone: [+91 9946882478](tel:+919946882478)
 
 Follow us on social media for updates and announcements:
 - [Facebook](https://www.facebook.com/e-schoolbooks)
 - [Twitter](https://www.twitter.com/e-schoolbooks)
 - [Instagram](https://www.instagram.com/e-schoolbooks)
 
----
 
-**Note**: Replace `your-website-url.com/path/to/your/logo.png` with the actual URL of your logo image. Feel free to customize the content to reflect the unique aspects of your company and its mission. Additionally, you may include other sections such as "Our Services," "Our Impact," and "Upcoming Initiatives" to provide a comprehensive overview of your organization.
+
