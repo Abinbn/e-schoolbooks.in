@@ -13,9 +13,9 @@ At E-SchoolBooks, we believe that education is the cornerstone of a bright and p
 
 Currently, we are proud to offer our services exclusively to students pursuing education under the Kerala State Education Department. As a company rooted in the local community, we are committed to supporting and uplifting students in this region. Our dedication to providing free textbooks to Kerala students is fueled by our belief in the transformative power of education.
 
-## Meet "Theo" - Our Parent Organization
+## Meet "Theo"- Our Parent Organization
 
-E-SchoolBooks is a part of "Theo," a non-profitable organization founded by the visionary Kevin Anjo. Theo manages and supports several other sub-companies, all with a common goal of making a positive difference in the world. With a strong sense of purpose and a passionate team, Theo leads the charge in creating a better future for generations to come.
+E-SchoolBooks is a part of "`Theo`," a non-profitable organization founded by the visionary Kevin Anjo. Theo manages and supports several other sub-companies, all with a common goal of making a positive difference in the world. With a strong sense of purpose and a passionate team, Theo leads the charge in creating a better future for generations to come.
 
 ## Our Team - A Passionate Force for Change
 
