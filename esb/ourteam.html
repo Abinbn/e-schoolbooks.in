@@ -7,19 +7,24 @@
     <title>Team Members</title>
     <link rel="stylesheet" href="ourteam.css" />
 
-<script src="script.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-<link rel="apple-touch-icon" sizes="180x180" href="esbimages/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="esbimages/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="esbimages/favicon-16x16.png">
-<link rel="manifest" href="esbimages/site.webmanifest">
-<link rel="mask-icon" href="esbimages/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="esbimages/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="esbimages/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="esbimages/favicon-16x16.png">
+    <link rel="manifest" href="esbimages/site.webmanifest">
+    <link rel="mask-icon" href="esbimages/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
 
   </head>
   <body>
@@ -27,8 +32,8 @@
     <header>
       <div class="container">
         <div class="logo">
-          <a href="#hero">
-            <span tooltip="e-School Books" flow="down" style="margin:0px 10px 0px 0px ;">
+          <a href="index.html">
+            <span tooltip="e-School Books" flow="down" style="margin:0px 0px 0px 0px ;"> 
               <img src="esbimages/esblogo.svg" class="svg-logo"\>
             </span>
           </a>
@@ -417,11 +422,11 @@
           </div>
           <div class="team-card">
             <div class="team-card__image">
-              <img class="photo" src="esbimages/parvathy.jpg" alt="Parvathy" loading="lazy">
+              <img class="photo" src="esbimages/pavithra.jpg" alt="Pavithra" loading="lazy">
             </div>
             <div class="team-card__content">
               <div class="details">
-                <h3 class="team-card__name">Parvathy</h3>
+                <h3 class="team-card__name">Pavithra</h3>
                 <p class="team-card__designation">marketing</p>
               </div>
               <div class="social_icons">
@@ -557,7 +562,82 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <!-- Sipt link -->
 
-<script src="script.js" type="text/javascript"></script>
+<script>
+  /*----------------------------------------------------*/
+/* Mobile Navigation
+------------------------------------------------------ */
+
+$('.mobileToggle').click(function() {
+    if ($('.mainNav').hasClass('openNav')) {
+        $('.mainNav').removeClass('openNav');
+    } else {
+        $('.mainNav').addClass('openNav');
+    }
+});
+
+$('.mainNav li a').click(function() {
+    if ($('.mainNav').hasClass('openNav')) {
+        $('.navigation').removeClass('openNav');
+        $('.mainNav').removeClass('openNav');
+    }
+});
+
+/*----------------------------------------------------*/
+/* Smooth Scrolling
+------------------------------------------------------ */
+
+$(document).ready(function () {
+  // This function runs when the document (HTML) has finished loading
+
+  $('.smoothscroll').on('click',function (e) {
+    // This event handler runs when a click event occurs on an element with the class "smoothscroll"
+
+    e.preventDefault(); 
+
+// Prevents the default click behavior (e.g., following a link)
+
+    var target = this.hash, 
+
+// Retrieves the hash value of the clicked element (e.g., "#section")
+
+    $target = $(target); 
+
+// Creates a jQuery object from the target hash value
+
+    $('html, body').stop().animate({
+      
+
+// Animates the scroll position of the <html> and <body> elements
+
+      'scrollTop': $target.offset().top
+    }, 1000, 'swing', function () {
+      
+
+// The animation lasts for 1000 milliseconds with a "swing" easing function (best is 800)
+
+      window.location.hash = target; 
+
+// Updates the window's hash value to maintain the URL state
+    });
+  });
+
+});
+
+
+/*----------------------------------------------------*/
+/* Hero Animation
+------------------------------------------------------ 
+
+
+var hero = new TimelineMax({});
+	hero.staggerFrom(".first", 0.7, {opacity: 0}, 0.5)
+		.staggerFrom(".second", 0.5, {opacity: 0, y: 20}, 0.4, "-=0.2");
+
+*/
+
+
+
+</script>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
