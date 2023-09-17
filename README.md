@@ -15,7 +15,7 @@ Currently, we are proud to offer our services exclusively to students pursuing e
 
 ## Meet "Theo"- Our Parent Organization
 
-E-SchoolBooks is a part of "`Theo`," a non-profitable organization founded by the visionary Kevin Anjo. Theo manages and supports several other sub-companies, all with a common goal of making a positive difference in the world. With a strong sense of purpose and a passionate team, Theo leads the charge in creating a better future for generations to come.
+E-SchoolBooks is a part of "`Theo`," a non-profitable organization founded by the visionary Kevin Anjo. Theo manages and supports several other sub-companies, all intending to make a positive difference in the world. With a strong sense of purpose and a passionate team, Theo leads the charge of creating a better future for the next generation.
 
 ## Our Team - A Passionate Force for Change
 
@@ -30,11 +30,11 @@ Our current website, [E-SchoolBooks.in](https://www.e-schoolbooks.in), is a user
 As a non-profit organization, we rely on the support of kind-hearted individuals and organizations to continue our mission. You can contribute to our cause by:
 
 - **[Donating](https://buy.stripe.com/5kA9BpcwC4eW5qgfYY)**: Your generous donations help us expand our reach and provide free textbooks to more students.
-- **Spreading the Word**: Share our platform with students, parents, and educators, so they can benefit from our resources.
+- **Spreading the Word**: Share our platform with students, parents, and educators so that they can benefit from our resources.
   ```
   www.e-schoolbooks.in
   ```
-- **[Volunteering](mailto:abinjannath007@gmail.com)**: If you are passionate about education, consider joining our team as a volunteer and contribute your skills and expertise.
+- **[Volunteering](mailto:abinjannath007@gmail.com)**: If you are passionate about education, consider joining our volunteer team and contributing your skills and expertise.
   
 
 ## Join Us on the Journey
@@ -55,4 +55,38 @@ Follow us on social media for updates and announcements:
 - [Instagram](https://www.instagram.com/e-schoolbooks)
 
 
+<hr>
+#Version_and_Update
+<hr>
 
+<p align="center"> Version 1 </p> 
+
+- Still available as [e-schoolbooks.in](e-schoolbooks.in) 
+- Made using WordPress
+- Limited style
+- Contains advertisement
+<hr>
+
+<p align="center"> Version 2 </p>
+
+- Made using HTML, CSS and Js
+- Simplified minimalistic model
+- Focused on content focusing
+- Branding color introduced.
+- From Class 1 to 10 all Kerala State malayalam and english textbook with flipbook model is available.
+
+<hr>
+
+<p align="center"> Version 2.1 </p> 
+
+- Bug in About and Team page resolved
+- Missing team image added
+
+<hr>
+
+<p align="center"> Version 2.2 </p> 
+
+- Corrected homepage bug in responsiveness
+- Added offline or online indicator in homepage as a trial.
+ 
+<hr>
