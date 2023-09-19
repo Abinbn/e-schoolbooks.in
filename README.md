@@ -72,8 +72,8 @@ Follow us on social media for updates and announcements:
 - Made using HTML, CSS and Js
 - Simplified minimalistic model
 - Focused on content focusing
-- Branding color introduced.
-- From Class 1 to 10 all Kerala State malayalam and english textbook with flipbook model is available.
+- Branding colour introduced.
+- From Class 1 to 10 all Kerala State Malayalam and English textbook with flipbook model is available.
 
 <hr>
 
@@ -87,6 +87,16 @@ Follow us on social media for updates and announcements:
 <p align="center"> Version 2.2 </p> 
 
 - Corrected homepage bug in responsiveness
-- Added offline or online indicator in homepage as a trial.
+- Added offline or online indicator on the homepage as a trial.
+ 
+<hr>
+
+<p align="center"> Version 3 </p> 
+
+- Converted the name E-school Books to Thoth
+- Beautified the HTML code
+- renamed the `index.html` to `thoth.html`
+- Changed the href path of `#hero` to `thoth.html`
+- Server side Bug analyser added. 
  
 <hr>
