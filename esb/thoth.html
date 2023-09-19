@@ -1,0 +1,365 @@
+<html>
+  <head>
+    <title>Thoth </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="script.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="esbimages/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="esbimages/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="esbimages/favicon-16x16.png">
+    <link rel="manifest" href="esbimages/site.webmanifest">
+    <link rel="mask-icon" href="esbimages/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+      /* Styling for the popup */
+      /* Styling for the online status message */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        background-color: rgba(255, 165, 0, 0.9);
+        /* Orange background with transparency */
+        color: white;
+        text-align: center;
+        z-index: 9999;
+        justify-content: center;
+      }
+
+      .popup-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      /* Styling for the online status message */
+      .status {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        /* Center the message horizontally */
+        width: auto;
+        height: auto;
+        background-color: rgb(20, 190, 20);
+        /* Green background */
+        color: white;
+        text-align: center;
+        z-index: 9999;
+      }
+
+      /* Styling for the online status message */
+    </style>
+  </head>
+  <body>
+    <div id="internetPopup" class="popup">
+      <div class="popup-content">
+        <p>You are not connected to the internet</p>
+      </div>
+    </div>
+    <!-- Online Status Message -->
+    <div id="onlineStatus" class="status">
+      <p>Welcome back, you are online</p>
+    </div>
+    <!-- Other content, scripts, etc. -->
+    <script src="your-script.js"></script>
+    <!-- Header & Navigation -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="thoth.html">
+            <span tooltip="Thoth" flow="down">
+              <img src="esbimages/esblogo.svg" class="svg-logo" \>
+            </span>
+          </a>
+        </div>
+        <div class="mainNav">
+          <div class="mobileToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <a class="smoothscroll" href="#hero">Home</a>
+              </li>
+              <li>
+                <a class="smoothscroll" href="#books">Books</a>
+              </li>
+              <li>
+                <a href="tools.html">Tools</a>
+              </li>
+              <li>
+                <a href="ourteam.html">About</a>
+              </li>
+              <!--    <li><a class="smoothscroll" href="#services">Authors Desk</a></li> -->
+              <li>
+                <a class="smoothscroll" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- Header & Navigation End -->
+    <!-- Hero -->
+    <section id="hero">
+      <div class="container">
+        <h2>
+          <span class="first">Welcome to </span>
+          </br>
+          <span class="white first">Thoth</span>
+          </br>
+          <span class="first">.</span>
+        </h2>
+        <p class="second">Education Need Complete Solving </br>
+        <p>Unlock your bright future</p>
+        </p>
+        <a href="#books" class="smoothscroll">
+          <div class="button second">Explore</div>
+        </a>
+      </div>
+    </section>
+    <!-- Hero End -->
+    <!-- Book Section -->
+    <section id="books">
+      <div class="container">
+        <div class="row">
+          <h2 class="center">BOOKS</h2>
+          <p class="center padDown">"Open a book, open your mind, and open the door to endless possibilities."</p>
+        </div>
+        <center>
+          </br>
+          <div class="row1">
+            <div class="row">
+              <div class="three col">
+                <div class="work">
+                  <a href="class1.html">
+                    <button class="image-button" onclick="showOverlay('Work One')">CLASS 1</button>
+                  </a>
+                  <div class="work-overlay"></div>
+                </div>
+              </div>
+              <div class="three col">
+                <div class="work">
+                  <a href="class2.html">
+                    <button class="image-button" onclick="showOverlay('Work Two')">CLASS 2</button>
+                  </a>
+                  <div class="work-overlay"></div>
+                </div>
+              </div>
+              <div class="three col">
+                <div class="work">
+                  <a href="class3.html">
+                    <button class="image-button" onclick="showOverlay('Work Three')">CLASS 3</button>
+                  </a>
+                  <div class="work-overlay"></div>
+                </div>
+              </div>
+              <div class="three col">
+                <div class="work">
+                  <a href="class4.html">
+                    <button class="image-button" onclick="showOverlay('Work Four')">CLASS 4</button>
+                  </a>
+                  <div class="work-overlay"></div>
+                </div>
+              </div>
+            </div>
+            </br>
+            <div class="row1">
+              <div class="row">
+                <div class="three col">
+                  <div class="work">
+                    <a href="class5.html">
+                      <button class="image-button" onclick="showOverlay('Work Five')">CLASS 5</button>
+                    </a>
+                    <div class="work-overlay"></div>
+                  </div>
+                </div>
+                <div class="three col">
+                  <div class="work">
+                    <a href="class6.html">
+                      <button class="image-button" onclick="showOverlay('Work Six')">CLASS 6</button>
+                      <a href="class1.html">
+                        <div class="work-overlay"></div>
+                  </div>
+                </div>
+                <div class="three col">
+                  <div class="work">
+                    <a href="class7.html">
+                      <button class="image-button" onclick="showOverlay('Work Seven')">CLASS 7</button>
+                    </a>
+                    <div class="work-overlay"></div>
+                  </div>
+                </div>
+                <div class="three col">
+                  <div class="work">
+                    <a href="class8.html">
+                      <button class="image-button" onclick="showOverlay('Work Eight')">CLASS 8</button>
+                    </a>
+                    <div class="work-overlay"></div>
+                  </div>
+                </div>
+              </div>
+              </br>
+              <div class="row1">
+                <div class="row">
+                  <div class="three col">
+                    <div class="work">
+                      <a href="class9.html">
+                        <button class="image-button" onclick="showOverlay('Work Nine')">CLASS 9</button>
+                      </a>
+                      <div class="work-overlay"></div>
+                    </div>
+                  </div>
+                  <div class="three col">
+                    <div class="work">
+                      <a href="class10.html">
+                        <button class="image-button" onclick="showOverlay('Work Ten')">CLASS 10</button>
+                      </a>
+                      <div class="work-overlay"></div>
+                    </div>
+                  </div>
+                  <div class="three col">
+                    <div class="work">
+                      <a href="class11.html">
+                        <button class="image-button" onclick="showOverlay('Work Eleven')">CLASS 11</button>
+                      </a>
+                      <div class="work-overlay"></div>
+                    </div>
+                  </div>
+                  <div class="three col">
+                    <div class="work">
+                      <a href="class12.html">
+                        <button class="image-button" onclick="showOverlay('Work Twelve')">CLASS 12</button>
+                      </a>
+                      <div class="work-overlay"></div>
+                    </div>
+                  </div>
+                </div>
+        </center>
+      </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="center">Get in Touch</h2>
+        <p class="center padDown">Join us on an exciting journey!</p>
+        <div class="row">
+          <form method="POST" action="#">
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="number" placeholder="Telephone" name="number" required>
+            <textarea placeholder="Message" name="message" required></textarea>
+            <input type="submit" value="Send" onclick="redirectToThankYou(event)">
+          </form>
+        </div>
+      </div>
+    </section>
+    <script>
+      function redirectToThankYou() {
+        window.location.href = "thankyou.html";
+        // Prevent the default form submission
+        event.preventDefault();
+      }
+    </script>
+    <!-- Contact Section End -->
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col six">
+            <a href="thoth.html" style="color:#FF4136; font-weight:900; ">Thoth</a>
+            <p>Kundara, Kollam, Kerala</p>
+            <p>691501</p>
+            <p>+91 9946882478</p>
+            <p>E-mail: <a href="mailto:info@e-schoolbooks.in">info@e-schoolbooks.in</a>
+            </p>
+          </div>
+          <div class="col six">
+            <ul>
+              <li>
+                <a class="smoothscroll" href="#hero">Home</a>
+              </li>
+              <li>
+                <a class="smoothscroll" href="thoth.html">Books</a>
+              </li>
+              <li>
+                <a href="ourteam.html">About</a>
+              </li>
+              <!--    <li><a class="smoothscroll" href="#services">Authors Desk</a></li> -->
+              <li>
+                <a href="thoth.html#contact">Contact</a>
+              </li>
+              <li>
+                <a href="https://buy.stripe.com/5kA9BpcwC4eW5qgfYY" target="blank">Donate </a>
+              </li>
+              <br>
+            </ul>
+            <hr>
+            <p style="text-align:justify;"> At Thoth, we are more than just an educational platform. We are dream weavers, knowledge seekers, and champions of growth. Our commitment is to empower students, nurture their curiosity, and guide them towards a brighter future. </br> With a shared sense of purpose, our team dedicates itself to providing top-notch educational resources, fostering a love for learning, and making a difference in the world, one young mind at a time. </p>
+            <div class="col six">
+              <ul>
+                <li>
+                  <a href="termsandcondition.html" style="color:#888888;">Terms and Condition</a>
+                </li>
+                <br>
+                <li>
+                  <a href="privacypolicy.html" style="color:#888888;"> Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Script link --->
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <!-- Script link --->
+    <script>
+      let isOnlineFlag = true; // Initialize the flag to true assuming the user is online initially
+      let onlinePopupTimer; // Timer to control the online popup display
+      // Function to check internet connection status
+      function isOnline() {
+        return navigator.onLine;
+      }
+      // Function to show or hide the internet connection popup
+      function toggleInternetPopup() {
+        const internetPopup = document.getElementById('internetPopup');
+        if (isOnline()) {
+          if (!isOnlineFlag) {
+            // User returned from an offline condition, show the online status message
+            isOnlineFlag = true; // Update the flag
+            internetPopup.style.display = 'none'; // Hide the popup if online
+            // Display the online status message for 300ms
+            const onlineStatus = document.getElementById('onlineStatus');
+            onlineStatus.style.display = 'block';
+            clearTimeout(onlinePopupTimer); // Clear any previous timer
+            onlinePopupTimer = setTimeout(() => {
+              onlineStatus.style.display = 'none';
+            }, 3000);
+          } else {
+            internetPopup.style.display = 'none'; // Hide the popup if online, and the user was already online
+          }
+        } else {
+          isOnlineFlag = false; // Update the flag if the user goes offline
+          internetPopup.style.display = 'block'; // Show the popup if offline
+        }
+      }
+      // Add an event listener to check and toggle the popup on page load and whenever the connection status changes
+      window.addEventListener('load', toggleInternetPopup);
+      window.addEventListener('online', toggleInternetPopup);
+      window.addEventListener('offline', toggleInternetPopup);
+    </script>
+  </body>
+</html>
