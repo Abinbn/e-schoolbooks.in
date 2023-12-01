@@ -1,8 +1,16 @@
 <!DOCTYPE html>
-<html lang="en, ml">
+<html lang="en">
 <html>
   <head>
+    <meta charset="utf-8">
     <title>Thoth </title>
+
+    <!-- meta signin -->
+    <meta name="google-signin-scope" content="profile">
+  <meta name="google-signin-client_id" content="175941142859-rd979944o2lbvtimmten2i7h0pq0m6b8.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+<!-- meta signin -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="script.js" type="text/javascript"></script>
@@ -15,7 +23,10 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <style>
-      /* Styling for the popup */
+      @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+/* Global Styles */
+
+/* Styling for the popup */
       /* Styling for the online status message */
       .popup {
         display: none;
@@ -56,6 +67,12 @@
         z-index: 9999;
       }
 
+
+      #user-logo{
+        width: 40px;
+        height: 40px;
+        display: block;
+      }
       /* Styling for the online status message */
     </style>
   </head>
@@ -70,14 +87,14 @@
       <p>Welcome back, you are online</p>
     </div>
     <!-- Other content, scripts, etc. -->
-    <script src="your-script.js"></script>
+    <script src="script.js"></script>
     <!-- Header & Navigation -->
     <header>
       <div class="container">
         <div class="logo">
           <a href="thoth.html">
             <span tooltip="Thoth" flow="down">
-              <img src="esbimages/esblogo.svg" class="svg-logo" \>
+              <img src="esbimages/esblogo.svg" class="svg-logo" alt="logo_of_esb">
             </span>
           </a>
         </div>
@@ -95,16 +112,17 @@
               <li>
                 <a class="smoothscroll" href="#books">Books</a>
               </li>
-              <li>
-                <a href="tools.html">Tools</a>
-              </li>
-              <li>
+               
+             <!-- <li>
                 <a href="ourteam.html">About</a>
-              </li>
+              </li> -->
               <!--    <li><a class="smoothscroll" href="#services">Authors Desk</a></li> -->
               <li>
                 <a class="smoothscroll" href="#contact">Contact</a>
               </li>
+              <li>
+                <img src="" id="user-logo" alt="User Logo">
+             </li>
             </ul>
           </nav>
         </div>
@@ -114,19 +132,31 @@
     <!-- Hero -->
     <section id="hero">
       <div class="container">
+       
         <h2>
           <span class="first">Welcome to </span>
           </br>
           <span class="white first">Thoth</span>
           </br>
-          <span class="first">.</span>
+          <span class="first">
+            <div id="profile-info"></div>
+           
+            <h1 id="hero-greeting">Hello, Kid!</h1>
+           
+          </span>
         </h2>
         <p class="second">Education Need Complete Solving </br>
         <p>Unlock your bright future</p>
         </p>
-        <a href="#books" class="smoothscroll">
+
+        <div id="google-signin" class="g-signin2" data-onsuccess="onSignIn"></div>
+        
+        <div id="google-signin-dropdown"></div>
+
+        <!-- <a href="#books" class="smoothscroll">
           <div class="button second">Explore</div>
-        </a>
+        </a> -->
+
       </div>
     </section>
     <!-- Hero End -->
@@ -328,6 +358,97 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <!-- Script link --->
+
+    <script>
+        function onSignIn(googleUser) {
+          var profile = googleUser.getBasicProfile();
+          console.log('ID: ' + profile.getId());
+          console.log('Name: ' + profile.getName());
+          console.log('Image URL: ' + profile.getImageUrl());
+    
+          // Display profile picture and username
+          displayProfileInfo(profile.getName(), profile.getImageUrl());
+    
+          // Change sign-in button to sign-out button
+          customizeSignInButton(false);
+    
+          // Update hero greeting
+          updateHeroGreeting(profile.getName());
+        }
+    
+        function displayProfileInfo(userName, imageUrl) {
+          var profileInfoElement = document.getElementById('profile-info');
+    
+          // Clear existing profile information
+          profileInfoElement.innerHTML = '';
+    
+          // Create an image element
+          var imgElement = document.createElement('img');
+          imgElement.src = imageUrl;
+          imgElement.alt = 'Profile Picture';
+          imgElement.display ='block';
+         
+
+    
+          // Append the image to the profile info div
+        //   profileInfoElement.appendChild(imgElement);
+    
+          // Create a paragraph element for the username
+          
+          var usernameElement = document.createElement('p');
+          usernameElement.textContent =  userName;
+    
+          // Append the username element to the profile info div
+          profileInfoElement.appendChild(usernameElement);
+        }
+    
+        function toggleDropdown() {
+          var dropdown = document.getElementById('dropdown');
+          dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+        }
+    
+        function signOut() {
+          var auth2 = gapi.auth2.getAuthInstance();
+          auth2.signOut().then(function () {
+            console.log('User signed out.');
+            // Clear profile information
+            document.getElementById('profile-info').innerHTML = '';
+            // Change sign-out button to sign-in button
+            customizeSignInButton(true);
+    
+            // Update hero greeting
+            updateHeroGreeting('Kid');
+          });
+        }
+    
+        function customizeSignInButton(isSignIn) {
+          var userLogo = document.getElementById('user-logo');
+          var googleSignInDropdown = document.getElementById('google-signin-dropdown');
+    
+          if (isSignIn) {
+            // Set default user logo image or hide it
+            userLogo.src = ''; // Set default image URL or set it to an empty string
+            userLogo.style.display = 'none';
+    
+            // Create Google's default sign-in button
+            googleSignInDropdown.innerHTML = '<div class="g-signin2" data-onsuccess="onSignIn"></div>';
+          } else {
+            // Set the user logo image after signing in
+            var profile = gapi.auth2.getAuthInstance().currentUser.get().getBasicProfile();
+            userLogo.src = profile.getImageUrl();
+            userLogo.style.display = 'block';
+    
+            // Remove Google's default sign-in button
+            googleSignInDropdown.innerHTML = '';
+          }
+        }
+    
+        function updateHeroGreeting(userName) {
+          var heroGreetingElement = document.getElementById('hero-greeting');
+          heroGreetingElement.textContent = 'Hello, ' + userName + '!';
+        }
+      </script>
+
     <script>
       let isOnlineFlag = true; // Initialize the flag to true assuming the user is online initially
       let onlinePopupTimer; // Timer to control the online popup display
