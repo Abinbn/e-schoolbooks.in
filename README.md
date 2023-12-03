@@ -15,7 +15,7 @@ Currently, we are proud to offer our services exclusively to students pursuing e
 
 ## Meet "Theo"- Our Parent Organization
 
-E-SchoolBooks is a part of "`Theo`," a non-profitable organization founded by the visionary Kevin Anjo. Theo manages and supports several other sub-companies, all intending to make a positive difference in the world. With a strong sense of purpose and a passionate team, Theo leads the charge of creating a better future for the next generation.
+E-SchoolBooks is a part of "`Theo`," a non-profit organization founded by the visionary Kevin Anjo. Theo manages and supports several other sub-companies, all intending to make a positive difference in the world. With a strong sense of purpose and a passionate team, Theo leads the charge of creating a better future for the next generation.
 
 ## Our Team - A Passionate Force for Change
 
@@ -39,7 +39,7 @@ As a non-profit organization, we rely on the support of kind-hearted individuals
 
 ## Join Us on the Journey
 
-We invite you to join us on this inspiring journey of knowledge, growth, and impact. Together, we can shape a brighter future for our children and create a world where education knows no boundaries.
+We invite you to join us on this inspiring knowledge, growth, and impact journey. Together, we can shape a brighter future for our children and create a world where education knows no boundaries.
 
 Visit our website [E-SchoolBooks.in](https://www.e-schoolbooks.in) to explore our resources and learn more about our mission.
 
@@ -97,6 +97,14 @@ Follow us on social media for updates and announcements:
 - Beautified the HTML code
 - renamed the `index.html` to `thoth.html`
 - Changed the href path of `#hero` to `thoth.html`
-- Server side Bug analyser added. 
+- Server-side Bug analyser added. 
  
+<hr>
+
+<p align="center"> Version 4 </p> 
+
+- [x] Added Google Oauth Sign in for user better experience.
+- [ ] Need to add Facebook Oauth method
+- [ ] Need to add manual email password and user detailed method of login
+
 <hr>
