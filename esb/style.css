@@ -1,3 +1,15 @@
+:root {
+   --light: #ffffff;
+   --dark: #000000;
+   --brand-red:#ff4136;
+   --hover-red: #fa281d;
+   --background-gradient-start: rgba(255, 255, 255, 1);
+   --background-gradient-mid: rgba(255, 255, 255, 1);
+   --background-gradient-end: rgba(182, 193, 207, 1);
+   --background-gradient-final: rgba(0, 31, 63, 1) ;
+   --footer:#2a2c2b;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
 /* Global Styles */
 
@@ -6,7 +18,16 @@ body {
    line-height: 1.5;
    font-family: "Roboto", sans-serif;
    color: #212529;
-   background-color: #fff;
+   /* background-color: #fff; */
+   background: var(--light);
+   background: linear-gradient(
+      180deg,
+      var(--background-gradient-start) 0%,
+      var(--background-gradient-mid) 26%,
+      var(--background-gradient-mid) 40%,
+      var(--background-gradient-end) 58%,
+      var(--background-gradient-final) 100%
+   );
 }
 * {
    -webkit-box-sizing: border-box;
@@ -194,34 +215,37 @@ button:hover {
 }
 /* Header */
 header {
-   padding: 20px 0;
+   display:block;
+   padding: 30px 0px;
    position: fixed;
-   width: 99%;
-   z-index: 999;
-   background: #001f3f;
-   margin-top: -10px;
+   width: 100dvw;
+   z-index: 1;
+   background: transparent;
+   margin-top: 0px;
 }
 .scrolled {
    background: #000;
 }
 header .logo {
-   font-weight: 700;
+   font-weight: 500;
    text-transform: uppercase;
    color: #ffffff;
    margin-top: 0;
    position: absolute;
    top: -10px;
-   font-size: 2rem;
+   font-size: 1.5rem;
 }
 
 .logo {
    width: 55px;
    height: 55px;
    box-shadow: 2px 2p 2px 2px white;
+   margin-left: -25px;
 }
+
 header .mainNav {
    top: 0px;
-   max-height: 30px;
+   max-height: 50px;
    z-index: 99;
    width: 100%;
    overflow: hidden;
@@ -233,6 +257,8 @@ header .openNav {
 }
 header nav {
    width: 100%;
+   height: auto;
+   scroll-behavior: auto;
 }
 header nav ul {
    list-style: none;
@@ -243,18 +269,22 @@ header nav ul {
 }
 header nav ul li {
    display: inline-block;
-   margin-left: 50px;
+   margin-left: 90px;
+   
 }
+
 header nav ul a {
    text-decoration: none;
-   color: #ffffff;
+   color: var(--brand-red);
+   
    text-transform: uppercase;
    font-size: 0.9em;
    font-weight: 700;
 }
 
 header nav ul a:hover {
-   color: #ff4136;
+   /* color: #ff4136; */
+   color: var(--hover-red);
 }
 header .mobileToggle {
    display: none;
@@ -269,8 +299,18 @@ header .mobileToggle span {
    width: 25px;
    height: 2px;
    margin-bottom: 6px;
-   background: #ffffff;
+   background: #000;
+   color: #000;
    display: block;
+}
+
+#user-logo{
+   position: sticky;
+   display: grid;
+   width: 40px;
+   height: 40px;
+   border-radius: 50px;
+   /* margin: auto; */
 }
 
 @media only screen and (max-width: 550px) {
@@ -298,10 +338,17 @@ header .mobileToggle span {
 /* Hero One */
 
 #hero {
-   background: #001f3f;
+   /* background: #001f3f; */
+   background-color: #ffffff;
    padding: 200px 0 120px 0;
+   max-height: 100dvh;
    text-align: center;
    margin: 0;
+   
+}
+
+img[alt] {
+   font-size: 12px;
 }
 
 #hero h2 {
@@ -318,11 +365,13 @@ header .mobileToggle span {
 }
 
 #hero p {
-   color: rgb(255, 255, 255, 0.7);
+   /* color: rgb(255, 255, 255, 0.7); */
+   color: #000;
+   font-weight: 900;
    font-size: 1rem;
    text-transform: uppercase;
    letter-spacing: 2px;
-   font-weight: normal;
+   /* font-weight: normal; */
    line-height: 21px;
    text-align: center;
    width: 60%;
@@ -330,7 +379,10 @@ header .mobileToggle span {
    margin: 0 auto;
    padding-bottom: 40px;
 }
+
 #hero .button {
+   position: relative;
+   overflow: hidden;
    border: 0;
    color: #fff;
    height: 50px;
@@ -343,9 +395,43 @@ header .mobileToggle span {
    font-family: "Roboto", sans-serif;
    text-transform: uppercase;
    font-weight: 700;
+   border-radius: 12px;
+   border-width: 0 0 4px;
+   border-style: solid;
+   box-sizing: border-box; /* Add this line to include padding and border in the total width and height */
+   box-shadow: 0px 3px 1px  #942520; /* Adjust the box shadow as needed */
+   outline: none;
+   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+
+
+#hero .button:hover {
+   background: #fa281d;
+   box-shadow: 0px -1px 1px #942520;
+}
+
+#hero .button::before {
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 120%;
+   height: 120%;
+   background: #fa281d;
+   border-radius: 50%;
+   opacity: 0;
+   pointer-events: none;
+   transition: opacity 0.3s ease;
+}
+
+#hero .button:active::before {
+   opacity: 1;
+}
+
 #hero .white {
-   color: #fff;
+   /* color: #fff; */
+   color: #000;
    font-weight: 700;
 }
 
@@ -362,6 +448,7 @@ header .mobileToggle span {
       width: 100%;
    }
 }
+
 /* About Section */
 
 #about {
@@ -434,7 +521,7 @@ button:active {
 /*Contact Section */
 
 #contact {
-   background: #ffffff;
+   background: transparent;
    padding: 120px 0;
    min-height: 400px;
 }
@@ -568,6 +655,7 @@ footer hr {
    text-transform: none; /* opinion 2 */
    font-size: 12px; /* opinion 3 */
    line-height: 1;
+   -webkit-user-select:none ;
    user-select: none;
    pointer-events: none;
    position: absolute;
@@ -678,4 +766,89 @@ body::-webkit-scrollbar {
 .svg-logo {
    color: #ff4136;
 
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+/* Global Styles */
+
+
+
+/* Google Auth popup */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        background-color: rgba(255, 165, 0, 0.9);
+        color: white;
+        text-align: center;
+        z-index: 9999;
+        justify-content: center;
+      }
+
+      .popup-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .status {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100% auto;
+        height: 10% auto;
+        background-color: rgb(20, 190, 20);
+        color: white;
+        text-align: center;
+        z-index: 9999;
+      }
+
+      #user-logo{
+        width: 40px;
+        height: 40px;
+        display: block;
+      }
+/* Google Auth popup */
+
+/* Video bg */
+
+
+video {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   z-index: 0; /* Make sure the video is behind the text content */
+}
+
+
+.season-btn{
+   width: 20px;
+   height: 20px;
+}
+
+.season-decor{
+   width: 50px;
+   height: 50px;
+}
+
+#muteButton{
+   width: 30px;
+   height: 30px;
+   border-radius: 30px;
+
+}
+
+
+.music-svg{
+   width: 30px;
+   height: 30px;
 }

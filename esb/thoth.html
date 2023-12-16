@@ -22,72 +22,22 @@
     <link rel="mask-icon" href="esbimages/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <style>
-      @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
-/* Global Styles */
-
-/* Styling for the popup */
-      /* Styling for the online status message */
-      .popup {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 10%;
-        background-color: rgba(255, 165, 0, 0.9);
-        /* Orange background with transparency */
-        color: white;
-        text-align: center;
-        z-index: 9999;
-        justify-content: center;
-      }
-
-      .popup-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      /* Styling for the online status message */
-      .status {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        /* Center the message horizontally */
-        width: auto;
-        height: auto;
-        background-color: rgb(20, 190, 20);
-        /* Green background */
-        color: white;
-        text-align: center;
-        z-index: 9999;
-      }
-
-
-      #user-logo{
-        width: 40px;
-        height: 40px;
-        display: block;
-      }
-      /* Styling for the online status message */
-    </style>
+    
   </head>
   <body>
+
+    <!-- Online Status -->
     <div id="internetPopup" class="popup">
       <div class="popup-content">
         <p>You are not connected to the internet</p>
       </div>
     </div>
-    <!-- Online Status Message -->
+    
     <div id="onlineStatus" class="status">
       <p>Welcome back, you are online</p>
     </div>
-    <!-- Other content, scripts, etc. -->
-    <script src="script.js"></script>
+    <!-- Online Status -->
+
     <!-- Header & Navigation -->
     <header>
       <div class="container">
@@ -98,6 +48,9 @@
             </span>
           </a>
         </div>
+
+        
+
         <div class="mainNav">
           <div class="mobileToggle">
             <span></span>
@@ -120,9 +73,17 @@
               <li>
                 <a class="smoothscroll" href="#contact">Contact</a>
               </li>
-              <li>
+              <!-- <li>
                 <img src="" id="user-logo" alt="User Logo">
-             </li>
+             </li> -->
+
+             <!-- <li>
+              <-!-- <button id="muteButton" title="Music"> 
+                <img src="https://api.iconify.design/material-symbols:android-now-playing-outline.svg?color=%23ff4136" alt="Music" class="music-svg" id="muteButton"/>
+              <-!-- </button> 
+             </li> -->
+
+             
             </ul>
           </nav>
         </div>
@@ -136,26 +97,45 @@
         <h2>
           <span class="first">Welcome to </span>
           </br>
-          <span class="white first">Thoth</span>
+          <span class="white first">
+            <img src="https://api.iconify.design/noto:christmas-tree.svg?color=%23ffffff" alt="christmas_tree_emoji" class="season-decor"/>
+            Thoth
+            <img src="https://api.iconify.design/fxemoji:fatherchristmas.svg?color=%23ffffff" alt="christmas_santa_emoji" class="season-decor"/>
+          </span>
           </br>
           <span class="first">
             <div id="profile-info"></div>
            
-            <h1 id="hero-greeting">Hello, Kid!</h1>
+            <h1 id="hero-greeting">Merry Christmas, Kid!</h1>
            
           </span>
         </h2>
-        <p class="second">Education Need Complete Solving </br>
+
+        <!-- <p class="second">Education Need Complete Solving </br>
         <p>Unlock your bright future</p>
-        </p>
+        </p> -->
+        <p class="second">Celebrate Your Christmas</br>
+          <!-- <p>Merry Christmas</p> -->
+          </p>
 
-        <div id="google-signin" class="g-signin2" data-onsuccess="onSignIn"></div>
+
+        <!-- <div id="google-signin" class="g-signin2" data-onsuccess="onSignIn"></div>
         
-        <div id="google-signin-dropdown"></div>
+        <div id="google-signin-dropdown"></div> -->
+<a href="https://forms.gle/4BzWkfAcqStjPbAt9" target="_blank" rel="noopener" title="Join" class="smoothscroll">
+        
+          <div class="button second">
+            <img src="https://api.iconify.design/uil:snowflake.svg?color=%23ffffff"  alt="Snow" class="season-btn"/>
+            Join With Us
+            <img src="https://api.iconify.design/uil:snowflake.svg?color=%23ffffff"  alt="Snow" class="season-btn"/>
+          </div>
+        </a>
 
-        <!-- <a href="#books" class="smoothscroll">
-          <div class="button second">Explore</div>
-        </a> -->
+        <!-- <audio id="backgroundMusic" autoplay >
+          <source src="file:///C:/Users/User/Desktop/esb%20website%20-%20Copy/e-schoolbooks.in/esb/audio/merry-xmas.mp3" type="audio/mp3" >
+          Your browser does not support the audio element.
+       </audio> -->
+        <!-- Music by <a href="https://pixabay.com/users/white_records-32584949/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=178228">Maksym Dudchyk</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=178228">Pixabay</a> -->
 
       </div>
     </section>
